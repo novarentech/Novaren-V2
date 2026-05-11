@@ -1,36 +1,84 @@
 ---
+import ScrollReveal from '@/components/ScrollReveal';
 import { getLangFromUrl, useTranslations } from '@/i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<footer class="bg-black text-white py-20 md:py-32 font-sans">
+<footer class="bg-black text-white font-sans min-h-screen flex flex-col justify-center py-32">
   <div class="container mx-auto px-6 md:px-12">
-    <div class="space-y-10 text-base md:text-lg font-light text-gray-300">
-      
-      <h2 class="text-3xl md:text-4xl font-medium text-white tracking-tight leading-snug">
-        {t('footer_intermittent.title')}<br class="hidden md:block"/> {t('footer_intermittent.title_space')}
-      </h2>
-      
-      <p class="leading-relaxed max-w-2xl">
-        {t('footer_intermittent.desc1')}<br class="hidden md:block"/>
-        {t('footer_intermittent.desc2')}<br class="hidden md:block"/>
-        {t('footer_intermittent.desc3')}
-      </p>
+    <div class="flex flex-col text-base md:text-lg font-light text-gray-300">
 
-      <p>{t('footer_intermittent.time')}</p>
+      <div class="min-h-[10vh] flex items-center">
+        <ScrollReveal
+          baseOpacity={0.1}
+          enableBlur={true}
+          baseRotation={6}
+          blurStrength={6}
+          containerClassName="text-3xl md:text-5xl font-medium text-white tracking-tight leading-snug"
+          client:visible
+        >
+          {`${t('footer_intermittent.title')} ${t('footer_intermittent.title_space')}`}
+        </ScrollReveal>
+      </div>
 
-      <p class="leading-relaxed">
-        {t('footer_intermittent.thanks')}<br/>
-        {t('footer_intermittent.ready')}
-      </p>
+      <div class="mt-20 flex items-center">
+        <ScrollReveal
+          baseOpacity={0.1}
+          enableBlur={true}
+          baseRotation={6}
+          blurStrength={6}
+          containerClassName="leading-relaxed max-w-2xl"
+          client:visible
+        >
+          {`${t('footer_intermittent.desc1')} ${t('footer_intermittent.desc2')} ${t('footer_intermittent.desc3')}`}
+        </ScrollReveal>
+      </div>
 
-      <div class="pt-16 font-semibold text-white text-lg space-y-6">
-        <p>{t('footer_intermittent.regards')}</p>
-        <p>Novaren Tech</p>
+      <div class="mt-6 flex items-center">
+        <ScrollReveal
+          baseOpacity={0.1}
+          enableBlur={true}
+          baseRotation={6}
+          blurStrength={6}
+          client:visible
+        >
+          {t('footer_intermittent.time')}
+        </ScrollReveal>
+      </div>
+
+      <div class="mt-6 flex items-center">
+        <ScrollReveal
+          baseOpacity={0.1}
+          enableBlur={true}
+          baseRotation={6}
+          blurStrength={6}
+          containerClassName="leading-relaxed"
+          client:visible
+        >
+          {`${t('footer_intermittent.thanks')} ${t('footer_intermittent.ready')}`}
+        </ScrollReveal>
+      </div>
+
+      <div class="mt-20 flex items-center">
+        <ScrollReveal
+          baseOpacity={0.1}
+          enableBlur={true}
+          baseRotation={6}
+          blurStrength={6}
+          containerClassName="pt-8"
+          client:visible
+        >
+          <div class="font-semibold text-white text-lg space-y-4">
+            <p>{t('footer_intermittent.regards')}</p>
+            <p>Novaren Tech</p>
+          </div>
+        </ScrollReveal>
       </div>
 
     </div>
   </div>
 </footer>
+
+
