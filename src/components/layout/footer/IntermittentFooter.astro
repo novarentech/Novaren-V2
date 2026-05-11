@@ -17,7 +17,7 @@ const t = useTranslations(lang);
           baseRotation={6}
           blurStrength={6}
           containerClassName="text-3xl md:text-5xl font-medium text-white tracking-tight leading-snug"
-          client:visible
+          client:only="react"
         >
           {`${t('footer_intermittent.title')} ${t('footer_intermittent.title_space')}`}
         </ScrollReveal>
@@ -30,7 +30,7 @@ const t = useTranslations(lang);
           baseRotation={6}
           blurStrength={6}
           containerClassName="leading-relaxed max-w-2xl"
-          client:visible
+          client:only="react"
         >
           {`${t('footer_intermittent.desc1')} ${t('footer_intermittent.desc2')} ${t('footer_intermittent.desc3')}`}
         </ScrollReveal>
@@ -42,7 +42,7 @@ const t = useTranslations(lang);
           enableBlur={true}
           baseRotation={6}
           blurStrength={6}
-          client:visible
+          client:only="react"
         >
           {t('footer_intermittent.time')}
         </ScrollReveal>
@@ -55,7 +55,7 @@ const t = useTranslations(lang);
           baseRotation={6}
           blurStrength={6}
           containerClassName="leading-relaxed"
-          client:visible
+          client:only="react"
         >
           {`${t('footer_intermittent.thanks')} ${t('footer_intermittent.ready')}`}
         </ScrollReveal>
@@ -68,7 +68,7 @@ const t = useTranslations(lang);
           baseRotation={6}
           blurStrength={6}
           containerClassName="pt-8"
-          client:visible
+          client:only="react"
         >
           <div class="font-semibold text-white text-lg space-y-4">
             <p>{t('footer_intermittent.regards')}</p>
